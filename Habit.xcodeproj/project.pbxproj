@@ -10,8 +10,10 @@
 		FE3698AE2898199E00B75235 /* HabitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3698AD2898199E00B75235 /* HabitApp.swift */; };
 		FE3698B2289819A000B75235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3698B1289819A000B75235 /* Assets.xcassets */; };
 		FE3698B5289819A000B75235 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3698B4289819A000B75235 /* Preview Assets.xcassets */; };
-		FE3698C028981A0800B75235 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3698BF28981A0800B75235 /* SplashView.swift */; };
+		FE3698C028981A0800B75235 /* SplashViewParaEstudo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3698BF28981A0800B75235 /* SplashViewParaEstudo.swift */; };
 		FE3698C228981B8D00B75235 /* SplashUIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3698C128981B8D00B75235 /* SplashUIState.swift */; };
+		FEC0445F289971A5001DB29E /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC0445E289971A5001DB29E /* SplashViewModel.swift */; };
+		FEC04461289994DB001DB29E /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC04460289994DB001DB29E /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,8 +21,10 @@
 		FE3698AD2898199E00B75235 /* HabitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitApp.swift; sourceTree = "<group>"; };
 		FE3698B1289819A000B75235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE3698B4289819A000B75235 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FE3698BF28981A0800B75235 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		FE3698BF28981A0800B75235 /* SplashViewParaEstudo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewParaEstudo.swift; sourceTree = "<group>"; };
 		FE3698C128981B8D00B75235 /* SplashUIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUIState.swift; sourceTree = "<group>"; };
+		FEC0445E289971A5001DB29E /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		FEC04460289994DB001DB29E /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +86,8 @@
 		FE3698BC289819C800B75235 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FE3698BF28981A0800B75235 /* SplashView.swift */,
+				FE3698BF28981A0800B75235 /* SplashViewParaEstudo.swift */,
+				FEC04460289994DB001DB29E /* SplashView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 		FE3698BE289819D900B75235 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FEC0445E289971A5001DB29E /* SplashViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -174,7 +180,9 @@
 			files = (
 				FE3698C228981B8D00B75235 /* SplashUIState.swift in Sources */,
 				FE3698AE2898199E00B75235 /* HabitApp.swift in Sources */,
-				FE3698C028981A0800B75235 /* SplashView.swift in Sources */,
+				FEC04461289994DB001DB29E /* SplashView.swift in Sources */,
+				FE3698C028981A0800B75235 /* SplashViewParaEstudo.swift in Sources */,
+				FEC0445F289971A5001DB29E /* SplashViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

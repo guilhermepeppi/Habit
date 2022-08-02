@@ -9,56 +9,26 @@ import SwiftUI
 
 struct SplashView: View {
     
-    @State var state: SplashUIState = .loading
+    @ObservedObject var ViewModel: SplashViewModel
     
     var body: some View {
-        switch state {
-        case .loading:
-            loadingView()
-            //loading - extensao
-            //LoadingView() - Compartilhamento de objetos
-        case .goToSignInScreen:
-            Text("Carregar tela de login")
-            // navegar para a proxima tela
-        case .goToHomeScreen:
-            Text("Carregar tela principal")
-            // navegar para a proxima tela
-        case .error(let msg):
-            loadingView(error: msg)
-            
-        }
-    }
-}
-
-// Compartilhamento de objetos
-// Usado quando precisa reutilizar a mesma parte do código
-struct LoadingView: View {
-    var body: some View {
-        ZStack {
-            Image("logo")
-                .resizable()
-                .scaledToFit()
-                .frame(maxWidth: .infinity, maxHeight: .infinity) // pra deixar dinamico
-                .padding(20)
-                .background(Color.white)
-                .ignoresSafeArea()
-        }
-    }
-}
-
-// Extensão
-// Usado quando NÃO precisa passar parametros
-extension SplashView {
-    var loading: some View {
-        ZStack {
-            Image("logo")
-                .resizable()
-                .scaledToFit()
-                .frame(maxWidth: .infinity, maxHeight: .infinity) // pra deixar dinamico
-                .padding(20)
-                .background(Color.white)
-                .ignoresSafeArea()
-        }
+        Group {
+            switch ViewModel.uiState {
+            case .loading:
+                loadingView()
+            case .goToSignInScreen:
+                Text("Carregar tela de login")
+                // navegar para a proxima tela
+            case .goToHomeScreen:
+                Text("Carregar tela principal")
+                // navegar para a proxima tela
+            case .error(let msg):
+                loadingView(error: msg)
+                
+            }
+        } .onAppear(perform: {
+            ViewModel.onAppear()
+        })
     }
 }
 
@@ -90,6 +60,7 @@ extension SplashView {
 
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashView(state: .error("Teste de erro"))
+        let ViewModel = SplashViewModel()
+        SplashView(ViewModel: ViewModel)
     }
 }
